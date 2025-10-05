@@ -1,0 +1,236 @@
+[gd_scene load_steps=27 format=3 uid="uid://6k5mxjnygy7s"]
+
+[ext_resource type="Script" uid="uid://b6fqx0ywyny5f" path="res://PLayer/PLayer.gd" id="1_7u6ql"]
+[ext_resource type="Texture2D" uid="uid://cgbf6tex0a5ba" path="res://Sunny Land Collection Files/Sunny Land Collection Files/Assets/Characters/Players/Foxy/Sprites/hurt/player-hurt-1.png" id="1_fsyn4"]
+[ext_resource type="Texture2D" uid="uid://c6a4pwcpl7gwo" path="res://Sunny Land Collection Files/Sunny Land Collection Files/Assets/Characters/Players/Foxy/Sprites/hurt/player-hurt-2.png" id="2_gnnox"]
+[ext_resource type="Texture2D" uid="uid://dtsxl7p8pibu3" path="res://Sunny Land Collection Files/Sunny Land Collection Files/Assets/Characters/Players/Foxy/Sprites/idle/player-idle-1.png" id="3_w17x6"]
+[ext_resource type="Texture2D" uid="uid://2yo185c00rec" path="res://Sunny Land Collection Files/Sunny Land Collection Files/Assets/Characters/Players/Foxy/Sprites/idle/player-idle-2.png" id="4_ratx4"]
+[ext_resource type="Texture2D" uid="uid://2f8l7788v4lk" path="res://Sunny Land Collection Files/Sunny Land Collection Files/Assets/Characters/Players/Foxy/Sprites/idle/player-idle-3.png" id="5_02cy1"]
+[ext_resource type="Texture2D" uid="uid://cwawnr5bc60ba" path="res://Sunny Land Collection Files/Sunny Land Collection Files/Assets/Characters/Players/Foxy/Sprites/idle/player-idle-4.png" id="6_ja0bv"]
+[ext_resource type="Texture2D" uid="uid://d1jg8l4k1phne" path="res://Sunny Land Collection Files/Sunny Land Collection Files/Assets/Characters/Players/Foxy/Sprites/jump/player-jump-1.png" id="7_ppsh7"]
+[ext_resource type="Texture2D" uid="uid://0rcbdte2bgc2" path="res://Sunny Land Collection Files/Sunny Land Collection Files/Assets/Characters/Players/Foxy/Sprites/jump/player-jump-2.png" id="8_vltou"]
+[ext_resource type="Texture2D" uid="uid://crkh4lg2gpdj7" path="res://Sunny Land Collection Files/Sunny Land Collection Files/Assets/Characters/Players/Foxy/Sprites/run/player-run-1.png" id="9_ahr0r"]
+[ext_resource type="Texture2D" uid="uid://47k6dounbbvi" path="res://Sunny Land Collection Files/Sunny Land Collection Files/Assets/Characters/Players/Foxy/Sprites/run/player-run-2.png" id="10_8sxak"]
+[ext_resource type="Texture2D" uid="uid://d1vpq0mnf57us" path="res://Sunny Land Collection Files/Sunny Land Collection Files/Assets/Characters/Players/Foxy/Sprites/run/player-run-3.png" id="11_ymd4u"]
+[ext_resource type="Texture2D" uid="uid://dcs4yvc1ek6d3" path="res://Sunny Land Collection Files/Sunny Land Collection Files/Assets/Characters/Players/Foxy/Sprites/run/player-run-4.png" id="12_u4fyw"]
+[ext_resource type="Texture2D" uid="uid://bklprnthfa8nf" path="res://Sunny Land Collection Files/Sunny Land Collection Files/Assets/Characters/Players/Foxy/Sprites/run/player-run-5.png" id="13_8qch5"]
+[ext_resource type="Texture2D" uid="uid://dtm8p1v6bp5e0" path="res://Sunny Land Collection Files/Sunny Land Collection Files/Assets/Characters/Players/Foxy/Sprites/run/player-run-6.png" id="14_fcycw"]
+[ext_resource type="Texture2D" uid="uid://bdwqyd8lslie3" path="res://Enemies and NPC/Winter Fox/Sprites/fox-1.png" id="16_1ig15"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1ig15"]
+size = Vector2(61, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0thak"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_fsyn4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_gnnox")
+}],
+"loop": true,
+"name": &"Death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_w17x6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ratx4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_02cy1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ja0bv")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_ppsh7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_vltou")
+}],
+"loop": true,
+"name": &"Jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_ahr0r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_8sxak")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ymd4u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_u4fyw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_8qch5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_fcycw")
+}],
+"loop": true,
+"name": &"Run",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_c1ux3"]
+resource_name = "Death"
+
+[sub_resource type="Animation" id="Animation_h8kda"]
+resource_name = "Fall"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Jump"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_s8ae3"]
+resource_name = "Idle"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0, 1, 2, 3]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [&"Idle"]
+}
+
+[sub_resource type="Animation" id="Animation_8e21y"]
+resource_name = "Jump"
+
+[sub_resource type="Animation" id="Animation_nkyo1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_4j58a"]
+resource_name = "Run"
+length = 0.55
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0, 1, 2, 3, 4, 5]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [&"Run"]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6rde4"]
+_data = {
+&"Death": SubResource("Animation_c1ux3"),
+&"Fall": SubResource("Animation_h8kda"),
+&"Idle": SubResource("Animation_s8ae3"),
+&"Jump": SubResource("Animation_8e21y"),
+&"RESET": SubResource("Animation_nkyo1"),
+&"Run": SubResource("Animation_4j58a")
+}
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_nt7sn"]
+
+[node name="PLayer" type="CharacterBody2D"]
+script = ExtResource("1_7u6ql")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-5.5, 2)
+shape = SubResource("RectangleShape2D_1ig15")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -16)
+sprite_frames = SubResource("SpriteFrames_0thak")
+animation = &""
+frame = 1
+flip_h = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.6, 1.6)
+limit_left = 0
+limit_top = 0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_6rde4")
+}
+autoplay = "Idle"
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource("AnimationNodeStateMachine_nt7sn")
+anim_player = NodePath("../AnimationPlayer")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("16_1ig15")

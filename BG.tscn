@@ -1,0 +1,122 @@
+[gd_scene load_steps=5 format=3 uid="uid://ciy0q5x61tltl"]
+
+[ext_resource type="Texture2D" uid="uid://byeu0cu1j1awo" path="res://Sunny Land Collection Files/Sunny Land Collection Files/Assets/Environments/Rocky Tileset/PNG/layers/rocky-tileset-background.png" id="1_f232g"]
+[ext_resource type="Script" uid="uid://bmnv5kkdoe1y8" path="res://BG.gd" id="1_h0yam"]
+[ext_resource type="Texture2D" uid="uid://ca5hksaj8fj42" path="res://Sunny Land Collection Files/Sunny Land Collection Files/Assets/Environments/SunnyLand/Props/plant-house.png" id="3_6nxd7"]
+[ext_resource type="Texture2D" uid="uid://bjnqjymerdk7w" path="res://sunny-land-phaser-project/sunny-land/assets/environment/middle.png" id="3_ekcki"]
+
+[node name="BG" type="ParallaxBackground"]
+script = ExtResource("1_h0yam")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Back" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(576, 326)
+scale = Vector2(3.42857, 3.35417)
+texture = ExtResource("1_f232g")
+
+[node name="House" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0, 1)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Plant-house" type="Sprite2D" parent="House"]
+position = Vector2(64, 328)
+texture = ExtResource("3_6nxd7")
+
+[node name="Plant-house2" type="Sprite2D" parent="House"]
+position = Vector2(176, 376)
+texture = ExtResource("3_6nxd7")
+
+[node name="Plant-house3" type="Sprite2D" parent="House"]
+position = Vector2(312, 328)
+texture = ExtResource("3_6nxd7")
+
+[node name="Plant-house4" type="Sprite2D" parent="House"]
+position = Vector2(424, 384)
+texture = ExtResource("3_6nxd7")
+
+[node name="Plant-house5" type="Sprite2D" parent="House"]
+position = Vector2(544, 328)
+texture = ExtResource("3_6nxd7")
+
+[node name="Plant-house6" type="Sprite2D" parent="House"]
+position = Vector2(672, 376)
+texture = ExtResource("3_6nxd7")
+
+[node name="Plant-house7" type="Sprite2D" parent="House"]
+position = Vector2(784, 328)
+texture = ExtResource("3_6nxd7")
+
+[node name="Plant-house8" type="Sprite2D" parent="House"]
+position = Vector2(904, 384)
+texture = ExtResource("3_6nxd7")
+
+[node name="Plant-house9" type="Sprite2D" parent="House"]
+position = Vector2(1048, 336)
+texture = ExtResource("3_6nxd7")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+position = Vector2(0, 88)
+motion_scale = Vector2(0.7, 1)
+motion_mirroring = Vector2(1232, 0)
+
+[node name="Middle" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(56, 388)
+scale = Vector2(0.636364, 0.934783)
+texture = ExtResource("3_ekcki")
+metadata/_edit_lock_ = true
+
+[node name="Middle2" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(172, 388)
+scale = Vector2(0.681818, 0.934783)
+texture = ExtResource("3_ekcki")
+metadata/_edit_lock_ = true
+
+[node name="Middle3" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(300, 388)
+scale = Vector2(0.772727, 0.934783)
+texture = ExtResource("3_ekcki")
+metadata/_edit_lock_ = true
+
+[node name="Middle4" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(424, 388)
+scale = Vector2(0.636364, 0.934783)
+texture = ExtResource("3_ekcki")
+metadata/_edit_lock_ = true
+
+[node name="Middle5" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(540, 388)
+scale = Vector2(0.681818, 0.934783)
+texture = ExtResource("3_ekcki")
+metadata/_edit_lock_ = true
+
+[node name="Middle6" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(668, 388)
+scale = Vector2(0.772727, 0.934783)
+texture = ExtResource("3_ekcki")
+metadata/_edit_lock_ = true
+
+[node name="Middle7" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(792, 388)
+scale = Vector2(0.636364, 0.934783)
+texture = ExtResource("3_ekcki")
+metadata/_edit_lock_ = true
+
+[node name="Middle8" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(908, 388)
+scale = Vector2(0.681818, 0.934783)
+texture = ExtResource("3_ekcki")
+metadata/_edit_lock_ = true
+
+[node name="Middle9" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(1036, 388)
+scale = Vector2(0.772727, 0.934783)
+texture = ExtResource("3_ekcki")
+metadata/_edit_lock_ = true
+
+[node name="Middle10" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(1168, 390)
+scale = Vector2(0.772727, 0.923913)
+texture = ExtResource("3_ekcki")
+metadata/_edit_lock_ = true
